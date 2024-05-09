@@ -8,11 +8,12 @@
 
 > [!NOTE]
 > This page shows an overview of the project, as well as some notes about progress.
-
  </td></tr></table>
 
 <!-- Main Overview -->
 <h2> Overview </h2>
+
+[:question: Preview the website at any time by clicking here! :question:](http://htmlpreview.github.io/?https://github.com/Fennifae/Website/blob/main/Pages/Age_Verification.html)
 
 This page houses the files for the website as it is under development. As changes are made, they will be periodically updated here, where they can be accessed and reviewed.
 
@@ -25,14 +26,6 @@ The general plan for the website is outlined below, in the Roadmap. Plans for fe
 <details>
   <summary><h2>Roadmap</h2></summary>
   
-<!-- Box Note Alert -->
-<table><tr><td>
-
-> [!NOTE]
-> This list will update over time.
-
- </td></tr></table>
-
 ### Homepage
 
 - [x] Age Restriction (Must be 21+)
