@@ -1,0 +1,74 @@
+
+/* A very basic Age Verification screen */
+/* Global Stuff */
+* {
+   font-size: x-large;
+   --Light_Color: lightblue;
+   --Medium_Light_Color: lightskyblue;
+   --Light_Color: cyan;
+   --Medium_Dark_Color: turquoise;
+   --Dark_Color: teal;
+}
+body {
+   background-color: black;
+   background-image: image-set(url("../Images/Purple_Stones.png"));
+   background-size: cover;
+   background-position: center;
+}
+#Popup {
+   display: table-cell;
+   vertical-align: middle;
+   margin: auto;
+   width: 100vw;
+   height: 95vh;
+}
+
+/* Top Panel */
+#Popup_Background {
+   display: table;
+   z-index: 1001;
+   background-color: var(--Dark_Color);
+   border-style: groove;
+   border-radius: 10px;
+   border-spacing: 10px;
+   margin: auto;
+   padding: 10px;
+   width: 50vw;
+}
+#Popup_Header_Row {
+   display: table-row;
+   background-color: var(--Medium_Dark_Color);
+   margin: 0px;
+   padding: 10px;
+   width: 100%;
+   height: 50vh;
+}
+#Popup_Header_Cell {
+   display: table-cell;
+   background-color: var(--Medium_Light_Color);
+   margin: 0px;
+   padding: 10px;
+   width: 100%;
+   height: 100%;
+}
+#Popup_Header_Text { text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+
+/* Button Area */
+#Popup_Buttonrack_Area { display: table-row; background-color: var(--Medium_Dark_Color); width: 100%; margin: 0px; }
+#Popup_Buttonrack {
+   display: table;
+   z-index: 1001;
+   background-color: var(--Dark_Color);
+   border-style: groove;
+   border-radius: 10px;
+   border-spacing: 10px;
+   margin: auto;
+   padding: 10px;
+   width: 50vw;
+}
+#Popup_Buttonrack_Row { display: table-row; background-color: var(--Medium_Dark_Color); width: 100%; margin: 0px; }
+#Popup_Buttonrack_Cell { display: table-cell; background-color: var(--Medium_Light_Color); width: 50%; margin: 0px; }
+
+/* Buttons */
+#Is_21_Button { display: block; margin: auto; }
+#Not_21_Button { display: block; margin: auto; }

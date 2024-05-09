@@ -1,0 +1,103 @@
+/* Global Definitions (Color Palette etc.) */
+* {
+   --Light_Color: lightgoldenrodyellow;
+   --Medium_Light_Color: rgb(118, 167, 150);
+   --Plain_Color: mediumseagreen;
+   --Medium_Dark_Color: forestgreen;
+   --Dark_Color: rgb(48, 64, 48);
+}
+body {
+
+   /* 
+      USE THE C:// PATH WHEN WORKING LOCALLY.
+      USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE.
+   */
+
+   --Path: C://DEV/WEBSITE;
+   /*--Path: "http://htmlpreview.github.io/?";*/
+
+
+   background-color: rgb(24, 45, 38);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/* Super Basic Nav-Bar */
+nav.Basic { position: relative; left: 64px; }
+a.Basic { color: white; font-size: xx-large; }
+
+/* Logos and Logo Settings */
+img.Logo_256 { width: 256px; height: 256px; }
+img.Logo_128 { width: 128px; height: 128px; }
+h1.Banner{
+   background-size: 100vw 256px;
+   height: 256px;
+   background-repeat: no-repeat;
+   margin: 0;
+   padding: 10px;
+}
+h1.Banner.Header { background-image: image-set(url("../Images/PlaceholderBanner.png")); text-align: left; }
+h1.Banner.Footer { background-image: image-set(url("../Images/PlaceholderFooter.png")); text-align: right; }
+td.Footer_Contact { position: relative; bottom: 72px; text-align: center; }
+td.Left_Align { position: relative; text-align: right; width: 5%; }
+
+/* Labels and Images */
+h1.Label{
+   background-size: 75%;
+   background-position: center;
+   height: 100%;
+   background-repeat: no-repeat;
+   text-align: center;
+   margin: 0;
+   padding: 16px;
+}
+
+h1.Stones_and_Crystals { background-image: image-set(url("../Images/Stones_and_Crystals.png")); background-size: 35%; padding: 48px; }
+h1.Kambara_Jasper { background-image: image-set(url("../Images/Label_Kambara_Jasper.png")); }
+h1.Ocean_Jasper { background-image: image-set(url("../Images/Label_Ocean_Jasper.png")); }
+h1.Citrine { background-image: image-set(url("../Images/Label_Citrine.png")); }
+
+h1.CBD_Products {  background-image: image-set(url("../Images/Label_CBD_Products.png")); background-size: 35%; padding: 48px; }
+h1.Paw_CBD { background-image: image-set(url("../Images/Paw_CBD.png")); }
+h1.Gummy_CBD { background-image: image-set(url("../Images/Gummy_CBD.png")); }
+h1.Roll_CBD { background-image: image-set(url("../Images/Roll_CBD.png")); }
+h1.CBD_Gummies { background-image: image-set(url("../Images/Label_CBD_Gummies.png")); }
+h1.CBD_Prerolls { background-image: image-set(url("../Images/Label_CBD_Prerolls.png")); }
+h1.CBD_Novelties { background-image: image-set(url("../Images/Label_CBD_Novelties.png")); }
+
+/* Desktop-Only Features (These will be disabled on phones and tablets) */
+@media only screen and (max-device-width: 1366px) { }
+
+/* Parallax Panels */
+.Parallax{
+   min-height: 500px;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.Parallax.Smoke { background-image: image-set(url("../Images/Smoke_Plume.png")); }
+.Parallax.Plant { background-image: image-set(url("../Images/Plant_Purple_Gems.png")); }
+
+/* Panels */
+table{ display: table; padding: 10px; margin: 0px; width: 100%; }
+table.Core { background-color: var(--Dark_Color);  height: 1024px; border-spacing: 10px; }
+table.Median_Fill { background-color: var(--Medium_Dark_Color); height: 100%; }
+
+td{ display: table-cell; padding: 10px; }
+td.Topbar { background-color: var(--Medium_Light_Color); width: 100%; height: 25%; }
+
+td.Vertical { background-color: var(--Medium_Light_Color); height: 100%; }
+td.Vertical.Tenth { width: 10%; }
+td.Vertical.Quarter { width: 25%; height: inherit; }
+td.Vertical.Third { width: 33%; }
+td.Vertical.Half { width: 50%; }
+td.Vertical.Fill { width: auto; }
+
+td.Horizontal { background-color: var(--Medium_Light_Color); width: 100%; }
+
+td.Median { background-color: var(--Medium_Dark_Color); height: 1024px; }
+td.Median_Scroller { background-color: var(--Dark_Color); height: inherit; }
+
+/* Buttons */
+input.Scroller { display: block; margin: auto; height: 50%; width: 100%; }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="height-full">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Age Verification</title>
+   <link rel="stylesheet" href="../Styles/SR_Style.css" />
+   <link rel="stylesheet" href="../Styles/SR_Age_Verify_Style.css" />
+</head>
+
+<body>
+   <div id="Popup">
+      <table id="Popup_Background">
+
+         <!-- Top Panel Area -->
+         <tr id="Popup_Header_Row">
+            <td id="Popup_Header_Cell">
+               <h1 id="Popup_Header_Text">You must be 21 or older to visit this website.</h1>
+            </td>
+         </tr>
+
+         <!-- Button Area -->
+         <tr id="Popup_Buttonrack_Area">
+            <table id="Popup_Buttonrack">
+               <tr id="Popup_Buttonrack_Row">
+                  <!-- Left Button -->
+                  <td id="Popup_Buttonrack_Cell">
+                     <input type="button" id="Is_21_Button" value="I'm over 21" />
+                  </td>
+                  <!-- Right Button -->
+                  <td id="Popup_Buttonrack_Cell">
+                     <input type="button" id="Not_21_Button" value="Leave" />
+                  </td>
+               </tr>
+            </table>
+         </tr>
+
+      </table>
+   </div>
+
+   <!-- Script when a button is clicked -->
+   <script type="text/javascript">
+      var pop = document.getElementById("Popup_Background");
+      //If there is a cookie already stored, don't show this popup
+      if (document.cookie.indexOf("CERTIFIEDAGE18") >= 0) { pop.style.display = "none"; }
+      //Add document.cookie.expires, a session cookie, then go to the Homepage
+      document.getElementById("Is_21_Button").onclick = function () { document.cookie = "CERTIFIEDAGE18=true"; window.location.replace(getComputedStyle(document.body).getPropertyValue('--Path') + "/Pages/Homepage.html"); }
+      //Redirect to Google if the other option is chosen
+      document.getElementById("Not_21_Button").onclick = function () { window.location.replace("http://www.google.com"); }
+   </script>
+</body>
+
+</html>
