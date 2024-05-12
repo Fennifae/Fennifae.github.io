@@ -1,103 +1,100 @@
-/* Global Definitions (Color Palette etc.) */
-* {
-   --Light_Color: lightgoldenrodyellow;
-   --Medium_Light_Color: rgb(118, 167, 150);
-   --Plain_Color: mediumseagreen;
-   --Medium_Dark_Color: forestgreen;
-   --Dark_Color: rgb(48, 64, 48);
-}
-body {
 
+* 
+{
    /* 
       USE THE C:// PATH WHEN WORKING LOCALLY.
       USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE.
    */
 
    /* --Path: C://DEV/WEBSITE; */
-   --Path: http://htmlpreview.github.io/?https://github.com/Fennifae/Website/blob/main;
+   --Path: "http://htmlpreview.github.io/?";
 
+   --Screen_Width: 98vw;
+   --Screen_Height: 96vh;
+   --Font_Size_Normal: 1.5vw;
+   --Font_Size_Large: 2vw;
+   --Font_Size_XLarge: 2.5vw;
+   --Font_Size_XXLarge: 3vw;
 
-   background-color: rgb(24, 45, 38);
-   background-repeat: no-repeat;
-   background-size: cover;
+   --Shadow_Thin: 8px 8px 8px hsla(0, 0%, 0%, 0.25), 16px 16px 16px hsla(0, 0%, 0%, 0.125);
+   --Shadow_Thick: 16px 16px 16px hsla(0, 0%, 0%, 0.25), 32px 32px 32px hsla(0, 0%, 0%, 0.125);
+
+   --Nav_Bar_Width: 90vw;
+   --Nav_Height: 40px;
+   --Nav_Cell_Width: 16vw;
+   --Nav_Gap: 6vw;
+
+   --Banner_Height: 25vh;
+   --Panel_Height: 96vh;
+
+   --Palette-Dark-Green: hsl(125, 5%, 55%);
+   --Palette-Plain-Green: hsl(125, 5%, 65%);
+
+   --Palette-Dark-Purple: hsl(285, 5%, 55%);
+   --Palette-Plain-Purple: hsl(285, 5%, 65%);
+
+   --Palette-Dark-Orange: hsl(45, 25%, 70%);
+   --Palette-Plain-Orange: hsl(45, 25%, 80%);
 }
 
-/* Super Basic Nav-Bar */
-nav.Basic { position: relative; left: 64px; }
-a.Basic { color: white; font-size: xx-large; }
 
-/* Logos and Logo Settings */
-img.Logo_256 { width: 256px; height: 256px; }
-img.Logo_128 { width: 128px; height: 128px; }
-h1.Banner{
-   background-size: 100vw 256px;
-   height: 256px;
-   background-repeat: no-repeat;
-   margin: 0;
-   padding: 10px;
+.Dynamic { width: auto; height: inherit; }
+.Fullscreen { width: var(--Screen_Width); height: var(--Screen_Height); }
+.Centered { text-align: center; vertical-align: middle; }
+
+/* NAV */
+.Nav { background-color: var(--Palette-Plain-Orange); height: var(--Nav_Height); border-radius: 64px; font-size: var(--Font_Size_Normal); }
+.Nav.Table { display: table; background-color: var(--Palette-Dark-Orange); width: var(--Nav_Bar_Width); padding: 5px; margin: auto; }
+.Nav.Row { display: table-row; }
+.Nav.Cell { display: table-cell; width: var(--Nav_Cell_Width); }
+/* For creating gaps between cells */
+.Nav.Stile { display: table-cell; background-color: var(--Palette-Dark-Orange); width: var(--Nav_Gap); }
+.Nav.Cell.Button {border-style: groove; border-color: transparent; padding-left: 10px; padding-right: 10px; box-shadow: var(--Shadow_Thin); }
+.Nav.Cell.Button:hover { border-color: hsla(45, 25%, 70%, 0.5); }
+
+/* BANNERS */
+.Banner { background-color: var(--Palette-Plain-Green); width: var(--Screen_Width); height: var(--Banner_Height); }
+.Banner.Table { display: table;  background-color: var(--Palette-Dark-Green); padding: 5px; box-shadow: var(--Shadow_Thick); }
+.Banner.Row { display: table-row; }
+/* For filling the whole banner with a single cell */
+.Banner.Cell { display: table-cell; }
+/* For aligning a square image to the left or right */
+.Banner.Icon { display: table-cell; width: var(--Banner_Height); height: var(--Banner_Height); }
+.Banner.Caption { display: table-cell; width: (99vw - var(--Banner_Height)); height: var(--Banner_Height); }
+
+/* PANELS */
+.Panel { background-color: var(--Palette-Plain-Purple); width: var(--Screen_Width); height: var(--Panel_Height); }
+.Panel.Table { display: table;  background-color: var(--Palette-Dark-Purple); padding: 5px; box-shadow: var(--Shadow_Thick); }
+.Panel.Row { display: table-row; }
+/* For filling the whole panel with a single cell */
+.Panel.Cell { display: table-cell; }
+
+
+/* Average Laptop */
+@media (max-width: 1024px) {
+   * 
+   {
+      --Nav_Height: 24px;
+   }
 }
-h1.Banner.Header { background-image: image-set(url("../Images/PlaceholderBanner.png")); text-align: left; }
-h1.Banner.Footer { background-image: image-set(url("../Images/PlaceholderFooter.png")); text-align: right; }
-td.Footer_Contact { position: relative; bottom: 72px; text-align: center; }
-td.Left_Align { position: relative; text-align: right; width: 5%; }
 
-/* Labels and Images */
-h1.Label{
-   background-size: 75%;
-   background-position: center;
-   height: 100%;
-   background-repeat: no-repeat;
-   text-align: center;
-   margin: 0;
-   padding: 16px;
+/* Average Tablet Device */
+@media (max-width: 768px) {
+   * 
+   {
+      --Nav_Height: 16px;
+   }
 }
 
-h1.Stones_and_Crystals { background-image: image-set(url("../Images/Stones_and_Crystals.png")); background-size: 35%; padding: 48px; }
-h1.Kambara_Jasper { background-image: image-set(url("../Images/Label_Kambara_Jasper.png")); }
-h1.Ocean_Jasper { background-image: image-set(url("../Images/Label_Ocean_Jasper.png")); }
-h1.Citrine { background-image: image-set(url("../Images/Label_Citrine.png")); }
-
-h1.CBD_Products {  background-image: image-set(url("../Images/Label_CBD_Products.png")); background-size: 35%; padding: 48px; }
-h1.Paw_CBD { background-image: image-set(url("../Images/Paw_CBD.png")); }
-h1.Gummy_CBD { background-image: image-set(url("../Images/Gummy_CBD.png")); }
-h1.Roll_CBD { background-image: image-set(url("../Images/Roll_CBD.png")); }
-h1.CBD_Gummies { background-image: image-set(url("../Images/Label_CBD_Gummies.png")); }
-h1.CBD_Prerolls { background-image: image-set(url("../Images/Label_CBD_Prerolls.png")); }
-h1.CBD_Novelties { background-image: image-set(url("../Images/Label_CBD_Novelties.png")); }
-
-/* Desktop-Only Features (These will be disabled on phones and tablets) */
-@media only screen and (max-device-width: 1366px) { }
-
-/* Parallax Panels */
-.Parallax{
-   min-height: 500px;
-   background-attachment: fixed;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+/* Average Mobile Device */
+@media (max-width: 480px) {
+   * 
+   {
+      --Nav_Height: 14px;
+   }
 }
-.Parallax.Smoke { background-image: image-set(url("../Images/Smoke_Plume.png")); }
-.Parallax.Plant { background-image: image-set(url("../Images/Plant_Purple_Gems.png")); }
 
-/* Panels */
-table{ display: table; padding: 10px; margin: 0px; width: 100%; }
-table.Core { background-color: var(--Dark_Color);  height: 1024px; border-spacing: 10px; }
-table.Median_Fill { background-color: var(--Medium_Dark_Color); height: 100%; }
 
-td{ display: table-cell; padding: 10px; }
-td.Topbar { background-color: var(--Medium_Light_Color); width: 100%; height: 25%; }
 
-td.Vertical { background-color: var(--Medium_Light_Color); height: 100%; }
-td.Vertical.Tenth { width: 10%; }
-td.Vertical.Quarter { width: 25%; height: inherit; }
-td.Vertical.Third { width: 33%; }
-td.Vertical.Half { width: 50%; }
-td.Vertical.Fill { width: auto; }
 
-td.Horizontal { background-color: var(--Medium_Light_Color); width: 100%; }
 
-td.Median { background-color: var(--Medium_Dark_Color); height: 1024px; }
-td.Median_Scroller { background-color: var(--Dark_Color); height: inherit; }
-
-/* Buttons */
-input.Scroller { display: block; margin: auto; height: 50%; width: 100%; }

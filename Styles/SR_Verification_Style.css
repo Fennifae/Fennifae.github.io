@@ -1,0 +1,57 @@
+* 
+{
+   --Box_Width: 50vw;
+   --Box_Height: 50vh;
+   --Rack_Width: 50vw;
+   --Rack_Cell_Width: 20vw;
+   --Rack_Gap: 5vw;
+   --Rack_Height: 5vh;
+}
+
+#Verification { background-color: var(--Palette-Plain-Green); }
+
+#Verification_Box { display: table-cell; }
+#Verification_Message { height: 37.5vh; }
+
+/* BOXES */
+.Box { border-width: 0px; border-collapse: collapse; margin: 0px; padding: 10px; }
+.Box.Table { display: table; background-color: var(--Palette-Dark-Purple); width: var(--Box_Width); height: var(--Box_Height); margin: auto; box-shadow: var(--Shadow_Thick); }
+.Box.Row { display: table-row; }
+/* For filling the whole box with a single cell */
+.Box.Cell { display: table-cell; font-size: var(--Font_Size_Large); }
+
+/* RACKS */
+.Rack { background-color: transparent; width: var(--Rack_Width); height: var(--Rack_Height); padding: 0px; border-width: 0px; margin: 0px; font-size: var(--Font_Size_Large); }
+.Rack.Table { display: table; }
+.Rack.Row { display: table-row; }
+/* For filling the whole rack with a single cell */
+.Rack.Stile { display: table-cell; width: var(--Rack_Gap); }
+.Rack.Cell { display: table-cell; background-color: var(--Palette-Plain-Orange); border-radius: 64px; width: var(--Rack_Cell_Width); }
+.Rack.Cell.Button {border-style: groove; border-color: transparent; box-shadow: var(--Shadow_Thin); }
+
+/* Hover only works on desktop */
+.Rack.Cell.Button:hover { border-color: hsla(45, 25%, 70%, 0.5); }
+
+/* Average Laptop */
+@media (max-width: 1024px) {
+   * 
+   {
+      --Rack_Height: 4vh;
+   }
+}
+
+/* Average Tablet Device */
+@media (max-width: 768px) {
+   * 
+   {
+      --Rack_Height: 3vh;
+   }
+}
+
+/* Average Mobile Device */
+@media (max-width: 480px) {
+   * 
+   {
+      --Rack_Height: 2vh;
+   }
+}
