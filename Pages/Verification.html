@@ -42,7 +42,7 @@
    <script type="text/javascript">
       var focus = document.getElementById("Verification_Buttons");
       //If there is a cookie already stored, don't show this popup
-      if (document.cookie.indexOf("CERTIFIEDAGE18") >= 0) { window.location.replace(getComputedStyle(document.body).getPropertyValue('--Path') + "/Pages/Home.html"); }
+      ////if (document.cookie.indexOf("CERTIFIEDAGE18") >= 0) { window.location.replace(getComputedStyle(document.body).getPropertyValue('--Path') + "/Pages/Home.html"); }
       //Add document.cookie.expires, a session cookie, then go to the Homepage
       document.getElementById("Verification_Buttons_Yes").onclick = function () { document.cookie = "CERTIFIEDAGE18=true"; window.location.replace(getComputedStyle(document.body).getPropertyValue('--Path') + "/Pages/Home.html"); }
       //Redirect to Google if the other option is chosen
