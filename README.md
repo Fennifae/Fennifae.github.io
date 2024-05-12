@@ -15,14 +15,14 @@
   [:question: Preview the website at any time by clicking here! :question:](http://htmlpreview.github.io/?https://github.com/Fennifae/Website/blob/main/Pages/Age_Verification.html)
 </h4>
 
-*The website's construction is well under way!*
+*Construction of the website is well under way!*
 
 This page houses the files for the website as it is under development. As changes are made, they will be periodically updated here, where they can be accessed and reviewed.
 
 The general plan for the website is outlined below, in the Roadmap. Plans for features are arranged into a list of checkboxes, which will become filled as that milestone is achieved.
 
 > [!Note]
-> The project does not yet have images, however this will change in the next update. A cleaning process will be applied to the product images, then beautiful scenes can be constructed. The framework is in place to allow a change in theme on each page, though at the moment they each use the same scheme.
+> Right now, the project does not have images, however this will change after the next update. A cleaning process will be applied to the product images, then beautiful scenes can be constructed. The framework is in place to allow a change in theme on each page, though at the moment they use the same scheme.
 
 > [!Important]
 > Under the **About** section on the right of the screen, press **Activity** (Next to the Graph icon) to see progress and changes made. On mobile devices, this is along the top of the screen.
@@ -113,16 +113,6 @@ The general plan for the website is outlined below, in the Roadmap. Plans for fe
 <br></td></tr></table>
 <table><tr><td>
 
-### Decor :o:
-
-- [ ] Arrange into general categories
-- [ ] Showcase products individually (Images and descriptions)
-
-> *This page will also follow a similar design to the 'crystals' page. Categories include items such as tapestries, insence products, and artwork.*
-
-<br></td></tr></table>
-<table><tr><td>
-
 ### CBD Products :o:
 
 - [ ] Arrange into general categories
@@ -131,7 +121,14 @@ The general plan for the website is outlined below, in the Roadmap. Plans for fe
 > *This page will follow a similar design to the 'crystals' page. Legal disclaimers will be placed where necessary.*
 
 <br></td></tr></table>
+<table><tr><td>
 
+### Decor :o:
 
+- [ ] Arrange into general categories
+- [ ] Showcase products individually (Images and descriptions)
 
+> *This page will also follow a similar design to the 'crystals' page. Categories include items such as tapestries, insence products, and artwork.*
+
+<br></td></tr></table>
 </details>
