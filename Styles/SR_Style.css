@@ -1,14 +1,6 @@
 
 * 
 {
-   /* 
-      USE THE C:// PATH WHEN WORKING LOCALLY.
-      USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE.
-   */
-
-   /* --Path: C://DEV/WEBSITE; */
-   --Path: "http://htmlpreview.github.io/?";
-
    --Screen_Width: 98vw;
    --Screen_Height: 96vh;
    --Font_Size_Normal: 1.5vw;
@@ -35,6 +27,16 @@
 
    --Palette-Dark-Orange: hsl(45, 25%, 70%);
    --Palette-Plain-Orange: hsl(45, 25%, 80%);
+}
+
+body {   
+   /* 
+      USE THE C:// PATH WHEN WORKING LOCALLY.
+      USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE.
+   */
+
+   /* --Path: C://DEV/WEBSITE; */
+   --Path: "http://htmlpreview.github.io/?";
 }
 
 
