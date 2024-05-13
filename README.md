@@ -52,6 +52,17 @@ The general plan for the website is outlined below, in the Roadmap. Plans for fe
 
 </div>
 
+<div style="text-align:center">
+
+![alt text](./Images/Jars_Display_Lightning.png)
+
+</div>
+<div style="text-align:center">
+
+*An example of what can be done with cleaned images*
+
+</div>
+
 <!-- Roadmap -->
 <details>
   <summary><h2>Roadmap</h2></summary>
