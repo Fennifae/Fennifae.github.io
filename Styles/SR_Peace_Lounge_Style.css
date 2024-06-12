@@ -1,3 +1,88 @@
-#Peace_Lounge { background-color: var(--Palette-Plain-Green); }
-#Peace_Lounge_Header {  border-width: 5px; }
-#Peace_Lounge_Footer {  border-width: 5px; }
+#Peace_Lounge { width: 100%; height: 100%; }
+#PL_Intro {
+   width: 100%;
+   min-height: 60vh;
+   max-height: 87vh;
+   height: 75vw;
+   background-position: 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 2vw;
+   box-shadow: var(--Shadow_Thick);
+   background-image: url(../Images/Lounge_Features.png);
+}
+#PL_Caption_Panel { padding-left: 50%; vertical-align: top; }
+#PL_Caption {
+   text-align: center;
+   font-family: Andy-Bold;
+   font-size: 2rem;
+   margin: 1%;
+   border-style: groove;
+   border-width: 0.5vw;
+   border-radius: 0vw 2.5vw;
+   box-shadow: var(--Shadow_Thick);
+   padding: 1%;
+}
+
+#PL_Seating { width: 98%; height: 45vw; margin: 1%; }
+
+#PL_Chalkboard,
+#PL_Snack_Panel,
+#PL_Seating_Image {
+   text-align: center;
+   font-family: Andy-Bold;
+   font-size: 2rem;
+   margin: 1%;
+   border-style: outset;
+   border-width: 2vw;
+   border-radius: 2vw;
+   box-shadow: var(--Shadow_Thick);
+   padding: 1%;
+}
+
+#PL_Chalkboard {
+   width: 98%;
+   height: 50vw;
+   background-image: url(../Images/Lounge_Chalkboard.png);
+   background-size: cover;
+}
+#PL_Chalkboard_Caption { height: 15%; vertical-align: bottom; }
+
+#PL_Chalkboard_Caption h1,
+#PL_Snack_Panel { margin: 0%; height: 100%; }
+
+#PL_Snack_Panel h2 { font-family: Cookie; margin: 0%; }
+#PL_Entrance_Sign {
+   width: 20vw;
+   height: 26.5vw;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-image: url(../Images/Lounge_Entrance_Sign.png);
+}
+#PL_Snacks_Rack {
+   width: 20vw;
+   height: 6vw;
+   border-style: groove;
+   border-width: 0.5vw;
+   border-radius: 2.5vw 0vw;
+   box-shadow: var(--Shadow_Thick);
+}
+.PL_Logo { width: 5vw; background-size: contain; background-repeat: no-repeat; }
+#PL_Logo_Redbull { background-image: url(../Images/Logo_Redbull.png); }
+#PL_Logo_Cocacola { background-image: url(../Images/Logo_Cocacola.png); }
+#PL_Logo_Hersheys { background-image: url(../Images/Logo_Hersheys.png); }
+#PL_Logo_Lays { background-image: url(../Images/Logo_Lays.png); background-position-y: 2.5%;}
+
+#PL_Seating_Panel_R { width: 20%; padding: 0%; }
+#PL_Seating_Image {
+   background-image: url(../Images/Lounge_Seating.png);
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+}
+#PL_Seating_Image h1 {
+   text-align: center;
+   font-family: Cookie;
+   font-size: 6rem;
+   margin: 1% 25% 0% 25%;
+}

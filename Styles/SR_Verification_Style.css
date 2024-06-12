@@ -1,57 +1,56 @@
-* 
-{
-   --Box_Width: 50vw;
-   --Box_Height: 50vh;
-   --Rack_Width: 50vw;
-   --Rack_Cell_Width: 20vw;
-   --Rack_Gap: 5vw;
-   --Rack_Height: 5vh;
+#Verification { height: 100vh; }
+#Verification_Holder {
+   display: table-cell;
+   width: 100vw;
+   height: 100vh;
+   text-align: center;
+   vertical-align: middle;
+   background-image: url(../Images/Verification_BG.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 50%;
 }
-
-#Verification { background-color: var(--Palette-Plain-Green); }
-
-#Verification_Box { display: table-cell; }
-#Verification_Message { height: 37.5vh; }
-
-/* BOXES */
-.Box { border-width: 0px; border-collapse: collapse; margin: 0px; padding: 10px; }
-.Box.Table { display: table; background-color: var(--Palette-Dark-Purple); width: var(--Box_Width); height: var(--Box_Height); margin: auto; box-shadow: var(--Shadow_Thick); }
-.Box.Row { display: table-row; }
-/* For filling the whole box with a single cell */
-.Box.Cell { display: table-cell; font-size: var(--Font_Size_Large); }
-
-/* RACKS */
-.Rack { background-color: transparent; width: var(--Rack_Width); height: var(--Rack_Height); padding: 0px; border-width: 0px; margin: 0px; font-size: var(--Font_Size_Large); }
-.Rack.Table { display: table; }
-.Rack.Row { display: table-row; }
-/* For filling the whole rack with a single cell */
-.Rack.Stile { display: table-cell; width: var(--Rack_Gap); }
-.Rack.Cell { display: table-cell; background-color: var(--Palette-Plain-Orange); border-radius: 64px; width: var(--Rack_Cell_Width); }
-.Rack.Cell.Button {border-style: groove; border-color: transparent; box-shadow: var(--Shadow_Thin); }
-
-/* Hover only works on desktop */
-.Rack.Cell.Button:hover { border-color: hsla(45, 25%, 70%, 0.5); }
+#Verification_Box {
+   display: table;
+   width: 50%;
+   margin: auto;
+   border-style: ridge;
+   border-width: 2vw;
+   border-radius: 2vw;
+   padding: 1vw;
+}
+#Verification_Message {
+   display: table-cell;
+   column-span: all;
+   text-align: center;
+   font-family: Andy-Bold;
+   font-size: 2rem;
+   padding-bottom: 5%;
+}
+#Verification_Greeting { font-family: Cookie; }
+.Verification_Button {
+   display: table-cell;
+   cursor: grab;
+   width: 50%;
+   text-align: center;
+   font-family: Cookie;
+   font-size: 2rem;
+   box-shadow: var(--Shadow_Thin);
+   border-radius: 4vw;
+   border-style: groove;
+   border-color: transparent;
+}
 
 /* Average Laptop */
 @media (max-width: 1024px) {
-   * 
-   {
-      --Rack_Height: 4vh;
-   }
+   #Verification_Message , .Verification_Button { font-size: 3rem; }
 }
-
 /* Average Tablet Device */
 @media (max-width: 768px) {
-   * 
-   {
-      --Rack_Height: 3vh;
-   }
+   #Verification_Message , .Verification_Button { font-size: 4rem; }
 }
-
 /* Average Mobile Device */
 @media (max-width: 480px) {
-   * 
-   {
-      --Rack_Height: 2vh;
-   }
+   #Verification_Box { width: 90%; }
+   #Verification_Message , .Verification_Button { font-size: 5rem; }
 }

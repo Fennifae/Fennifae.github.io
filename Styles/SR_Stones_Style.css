@@ -1,3 +1,33 @@
-#Stones { background-color: var(--Palette-Plain-Green); }
-#Stones_Header {  border-width: 5px; }
-#Stones_Footer {  border-width: 5px; }
+
+.Stones_Info {
+   width: 100%;
+   min-height: 48vw;
+   height: calc(34vh - 3rem);
+}
+.Stones_Banner {
+   width: 100%;
+   min-height: 24vw;
+   height: calc(16vh - 1.5rem);
+}
+.Stones_Panel {
+   width: 100%;
+   min-height: 72vw;
+   height: calc(50vh - 4.5rem);
+}
+.Stones_Info table,
+.Stones_Banner table,
+.Stones_Panel table {
+   width: 100%;
+   height: 100%;
+}
+.Stones_Info td,
+.Stones_Banner td,
+.Stones_Panel td {
+   text-align: center;
+   border-style: ridge;
+   border-width: 2vw;
+   border-radius: 2vw;
+}
+
+.Stones_Banner.Righthanded td:first-child { width: 25%; }
+.Stones_Banner.Lefthanded td:last-child { width: 25%; }

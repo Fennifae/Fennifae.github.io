@@ -11,42 +11,35 @@
 
 <body id="Verification">
 
-   <div id="Verification_Box" class="Fullscreen Centered">
-
-      <table class="Box Table">
-         <tr id="Verification_Message" class="Box Row">
-            <td class="Box Cell">
-               <h1>Hey there!</h1>
+   <div id="Verification_Holder">
+      <table id="Verification_Box" class="InverseBox PrimaryFont InverseGradient">
+         <tr>
+            <td colspan="2" id="Verification_Message">
+               <h1 id="Verification_Greeting">Hey there!</h1>
                You must be at least 21 years old to enter this site.
             </td>
          </tr>
-         <tr class="Box Row">
-            <td class="Box Cell">
-               <table class="Rack Table">
-                   <!-- If Javascript is disabled, the buttons still function -->
-                  <tr id="Verification_Buttons" class="Rack Row">
-                     <td class="Rack Stile"></td>
-                     <td class="Centered Rack Cell"><input id="Verification_Buttons_Yes" class="Rack Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Home.html');" value="I'm Over 21" /></td>
-                     <td class="Rack Stile"></td>
-                     <td class="Centered Rack Cell"><input id="Verification_Buttons_No" class="Rack Cell Button" type="button" onclick="window.location.replace='http://www.google.com';" value="Leave" /></td>
-                     <td class="Rack Stile"></td>
-                  </tr>
-               </table>
-            </td>
+         <tr>
+            <td id="Verification_Yes" class="ContrastBox ContrastFont Verification_Button" onclick="verify(true)">I'm Over 21</td>
+            <td id="Verification_No" class="AccentBox AccentFont Verification_Button" onclick="verify(false)">Leave</td>
          </tr>
       </table>
-
    </div>
 
    <!-- Script when a button is clicked -->
    <script type="text/javascript">
-      var focus = document.getElementById("Verification_Buttons");
+      function verify (mode) {
+         if (mode) {
+            document.cookie = "VERIFIED21=true";
+            window.location.replace(getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html");
+         }
+         else window.location.replace("http://www.google.com");
+      }
+      var focus = document.getElementById("Verification_Box");
       //If there is a cookie already stored, don't show this popup
-      ////if (document.cookie.indexOf("CERTIFIEDAGE18") >= 0) { window.location.replace(getComputedStyle(document.body).getPropertyValue('--Path') + "/Pages/Home.html"); }
-      //Add document.cookie.expires, a session cookie, then go to the Homepage
-      document.getElementById("Verification_Buttons_Yes").onclick = function () { document.cookie = "CERTIFIEDAGE18=true"; window.location.replace(getComputedStyle(document.body).getPropertyValue('--Path') + "/Pages/Home.html"); }
-      //Redirect to Google if the other option is chosen
-      document.getElementById("Verification_Buttons_No").onclick = function () { window.location.replace("http://www.google.com"); }
+      if (document.cookie.indexOf("VERIFIED21") >= 0) {
+         window.location.replace(getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html");
+      }
    </script>
 
 

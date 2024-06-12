@@ -1,0 +1,194 @@
+/* 
+   NAV
+   ----------------
+
+   'Nav' , the nav bar, relies on four variables:
+   --Nav_Hover             ~      Whether hovering over the nav bar (not possible on touchscreen)
+   --Shade_Button_Hover    ~      Whether hovering over the shade button (not possible on touchscreen)
+      *If the shade is only open due to hovering over the nav bar, it should collapse when hovering over the shade button,
+       so that the shade button can be clicked to 'lock' it open. Without this, it would render the shade button useless and confusing.
+       As the user hovers to press the button, the menu unfolds, then it can only 'lock' the menu closed. On touchscreens, a hover happens
+       just before a touch, so it would seem as though the button did nothing and no shade would unfold.
+   --Shade_Open            ~     Whether the shade is open.
+      *If the shade is open due to hovering, the shade button should display a neutral symbol to imply it has no effect (≡). If the shade is
+      closed, the shade button should display a symbol to imply it can be pressed to open the shade (˅). If the shade is locked open because
+      the shade button was pressed, the shade button should display a symbol to imply it can be pressed to close the shade (˄).
+   --Shade_Locked          ~     Whether the shade locked in its current position, ignoring hover.
+      *If the shade is open because the shade button was pressed, then it stays open as the user stops hovering. If the shade is open
+      it should not respond to hovering over it as a way to open or close it. A special behaviour takes over when closing the shade, keeping
+      it locked closed until no longer hovering over the nav bar. This keeps the shade from immediately re-opening when the shade button is
+      pressed to close it.
+
+   By using Javascript to set these actively, a type of check can be preformed for the conditions of each visual change.
+*/
+/* DEFAULT STYLES */
+#Nav {
+   display: table;
+   z-index: 5000;
+   transition: all 0.5s ease-in-out;
+   width: 100%;
+   position: sticky;
+   top: 0vh;
+   box-shadow: var(--Shadow_Thick);
+   border-style: double;
+   border-width: 0vw 1vw 1vw 1vw;
+   border-radius: 0vw 0vw 2vw 2vw;
+   background-position-y: 20%;
+   padding: 1vw;
+}
+#Nav_Row {
+   display: table-row;
+   height: 100%;
+}
+#Nav_Cell {
+   display: table-cell;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   vertical-align: top;
+}
+.Nav_Panel {
+   display: inline-table;
+   width: 25%;
+   vertical-align: top;
+}
+
+.Nav_Label {
+   display: table-cell;
+   column-span: 3;
+   
+   vertical-align: top;
+   font-size: 3rem;
+   font-family: Andy-Bold;
+}
+#Nav_Page_Label {
+   text-align: left;
+}
+#Nav_Shade_Label {
+   text-align: right;
+   padding-right: 0.5vw;
+}
+#Nav_Page_Icon {
+   display: table-cell;
+   width: 20%;
+   text-align: center;
+   vertical-align: top;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+#Nav_Shade_Toggle {
+   display: table-cell;
+   cursor: grab;
+   width: 20%;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-image: image-set(url('../Images/Icon_Menu.png'));
+}
+#Nav_Header_Holder {
+   display: inline-block;
+   width: 49%;
+   height: 0.5vw;
+   text-align: center;
+   vertical-align: top;
+   overflow: visible;
+}
+#Nav_Header {
+   position: relative;
+   bottom: 100%;
+   animation: delay-bump-down 0.75s;
+   font-size: 4rem;
+   font-family: Cookie;
+}
+#Nav_Dropdown {
+   display: inline-table;
+   width: 49%; 
+   height: 100%;
+   text-align: center;
+   vertical-align: middle;
+}
+#Nav_Buttons_Holder {
+   display: table-cell;
+   vertical-align: top;
+   padding: 0%;
+}
+#Nav_Buttons_Holder ul {
+   list-style-type: none;
+   visibility: hidden;
+   overflow: hidden;
+   transition: all 0.5s ease-in-out;
+   height: 0vw;
+   margin: 0vw;
+   padding: 0%;
+   padding-left: 10%;
+   padding-right: 10%;
+}
+#Nav_Buttons_Holder ul li:not(:last-child) {
+   margin-bottom: 1.5vw;
+}
+#Nav_Buttons_Holder .Nav_Button {
+   display: table-cell;
+   cursor: grab;
+   width: 100%;
+   font-family: Cookie;
+   font-size: 2rem;
+   box-shadow: var(--Shadow_Thin);
+   border-radius: 4vw;
+   border-style: groove;
+   border-color: transparent;
+}
+/* ANIMATIONS */
+/* 
+   Triggered when hovering over the closed nav bar, the shade button was not pressed, so the shade is not locked closed.
+   This style stops if the user hovers over the shade button.
+   (auto-open on hover) 
+*/
+:root[style*="--Nav_Hover: true;"]:not(
+   [style*="--Shade_Button_Hover: true;"],
+   [style*="--Shade_Open: false;"],
+   [style*="--Shade_Locked: true;"]
+   ) #Nav,
+:root[style*="--Shade_Locked: true;"]:not(
+   [style*="--Shade_Open: false;"]
+   ) #Nav {
+      border-radius: 0vw 0vw 4vw 4vw;
+   }
+/* Triggered when opening the shade. (unfurl) */
+:root[style*="--Nav_Hover: true;"]:not(
+   [style*="--Shade_Button_Hover: true;"],
+   [style*="--Shade_Open: false;"],
+   [style*="--Shade_Locked: true;"]
+   ) #Nav_Buttons_Holder ul,
+:root[style*="--Shade_Locked: true;"]:not(
+   [style*="--Shade_Open: false;"]
+   ) #Nav_Buttons_Holder ul{
+      visibility: visible;
+      height: calc(14vw + 20px);
+      animation-name: delay-show-overflow;
+      animation-duration: 1.25s;
+      overflow: visible;
+   }
+
+:root[style*="--Nav_Hover: true;"]:not(
+   [style*="--Shade_Button_Hover: true;"],
+   [style*="--Shade_Open: false;"],
+   [style*="--Shade_Locked: true;"]
+   ) #Nav_Header,
+:root[style*="--Shade_Locked: true;"]:not(
+   [style*="--Shade_Open: false;"]
+   ) #Nav_Header {
+      bottom: 200%;
+      animation: delay-bump-up 0.25s;
+   }
+/* Triggered when hovering over the shade button. (show down-arrow) */
+:root[style*="--Nav_Hover: true;"]:not(
+   [style*="--Shade_Button_Hover: false;"],
+   [style*="--Shade_Open: true;"]
+   ) #Nav_Shade_Toggle {
+      background-image: image-set(url('../Images/Icon_Down.png'));
+   }
+/* Triggered when the shade is locked open. (show up-arrow) */
+:root[style*="--Shade_Locked: true;"]:not(
+   [style*="--Shade_Open: false;"]
+   ) #Nav_Shade_Toggle {
+      background-image: image-set(url('../Images/Icon_Up.png'));
+   }

@@ -1,99 +1,202 @@
-
-* 
-{
-   --Screen_Width: 98vw;
-   --Screen_Height: 96vh;
-   --Font_Size_Normal: 1.5vw;
-   --Font_Size_Large: 2vw;
-   --Font_Size_XLarge: 2.5vw;
-   --Font_Size_XXLarge: 3vw;
-
-   --Shadow_Thin: 8px 8px 8px hsla(0, 0%, 0%, 0.25), 16px 16px 16px hsla(0, 0%, 0%, 0.125);
-   --Shadow_Thick: 16px 16px 16px hsla(0, 0%, 0%, 0.25), 32px 32px 32px hsla(0, 0%, 0%, 0.125);
-
-   --Nav_Bar_Width: 90vw;
-   --Nav_Height: 40px;
-   --Nav_Cell_Width: 16vw;
-   --Nav_Gap: 6vw;
-
-   --Banner_Height: 25vh;
-   --Panel_Height: 96vh;
-
-   --Palette-Dark-Green: hsl(125, 5%, 55%);
-   --Palette-Plain-Green: hsl(125, 5%, 65%);
-
-   --Palette-Dark-Purple: hsl(285, 5%, 55%);
-   --Palette-Plain-Purple: hsl(285, 5%, 65%);
-
-   --Palette-Dark-Orange: hsl(45, 25%, 70%);
-   --Palette-Plain-Orange: hsl(45, 25%, 80%);
+/* Default/Desktop */
+@font-face { font-family: Cookie; src: url('Cookie.ttf'); }
+@font-face {
+   font-family: 'Andy-Bold';
+   src:url('Webfonts/Andy-Bold.ttf.woff') format('woff'),
+       url('Webfonts/Andy-Bold.ttf.svg#Andy-Bold') format('svg'),
+       url('Webfonts/Andy-Bold.ttf.eot'),
+       url('Webfonts/Andy-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+   font-weight: normal;
+   font-style: normal;
 }
-
-body {   
-   /* 
-      USE THE C:// PATH WHEN WORKING LOCALLY.
-      USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE.
-   */
-
-   /* --Path: C://DEV/WEBSITE; */
+@keyframes delay-show-overflow { from { overflow: hidden; } }
+@keyframes delay-bump-up { from { bottom: 100%; } }
+@keyframes delay-bump-down { from { bottom: 200%; } }
+@keyframes Fade_In { from {opacity: .4} to {opacity: 1} }
+:root {
+   /* USE THE 'C://' PATH WHEN WORKING LOCALLY. USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE. */
+   /* --Path: C://DEV/Website;  */
    --Path: http://htmlpreview.github.io/?https://github.com/Fennifae/Website/blob/main;
+
+   /* rem unit definition - based on the font size of the root element */
+   font-size: 1vw;
+
+   /* Whether or not to use the feature highlighter tool */
+   --Feature_Highlight: false;
+
+   /* Basic variables */
+   --Format: Classic;
+   --Mode: Desktop;
+
+   /* Tetradic (double-complementary) Color Scheme */
+   --Primary:           40;
+   --Primary-Shadow:    hsl(var(--Primary), 30%, 10%);
+   --Primary-Dark:      hsl(var(--Primary), 30%, 25%);
+   --Primary-Plain:     hsl(var(--Primary), 30%, 50%);
+   --Primary-Bright:    hsl(var(--Primary), 30%, 75%);
+   --Primary-Outline:   -0.1rem -0.1rem 0px var(--Primary-Shadow),
+                         0.1rem -0.1rem 0px var(--Primary-Shadow),
+                        -0.1rem  0.1rem 0px var(--Primary-Shadow),
+                         0.1rem  0.1rem 0px var(--Primary-Shadow);
+
+   --Contrast:          130;
+   --Contrast-Shadow:   hsl(var(--Contrast), 30%, 10%);
+   --Contrast-Dark:     hsl(var(--Contrast), 30%, 25%);
+   --Contrast-Plain:    hsl(var(--Contrast), 30%, 50%);
+   --Contrast-Bright:   hsl(var(--Contrast), 30%, 75%);
+   --Contrast-Outline:  -0.1rem -0.1rem 0px var(--Contrast-Shadow),
+                         0.1rem -0.1rem 0px var(--Contrast-Shadow),
+                        -0.1rem  0.1rem 0px var(--Contrast-Shadow),
+                         0.1rem  0.1rem 0px var(--Contrast-Shadow);
+
+   --Inverse:           220;
+   --Inverse-Shadow:    hsl(var(--Inverse), 30%, 10%);
+   --Inverse-Dark:      hsl(var(--Inverse), 30%, 25%);
+   --Inverse-Plain:     hsl(var(--Inverse), 30%, 50%);
+   --Inverse-Bright:    hsl(var(--Inverse), 30%, 75%);
+   --Inverse-Outline:   -0.1rem -0.1rem 0px var(--Inverse-Shadow),
+                         0.1rem -0.1rem 0px var(--Inverse-Shadow),
+                        -0.1rem  0.1rem 0px var(--Inverse-Shadow),
+                         0.1rem  0.1rem 0px var(--Inverse-Shadow);
+               
+   --Accent:            310;
+   --Accent-Shadow:     hsl(var(--Accent), 30%, 10%);
+   --Accent-Dark:       hsl(var(--Accent), 30%, 25%);
+   --Accent-Plain:      hsl(var(--Accent), 30%, 50%);
+   --Accent-Bright:     hsl(var(--Accent), 30%, 75%);
+   --Accent-Outline:    -0.1rem -0.1rem 0px var(--Accent-Shadow),
+                         0.1rem -0.1rem 0px var(--Accent-Shadow),
+                        -0.1rem  0.1rem 0px var(--Accent-Shadow),
+                         0.1rem  0.1rem 0px var(--Accent-Shadow);
+}
+/* Tetradic (double-complementary) Color Scheme */
+.PrimaryBox { border-color: var(--Primary-Dark); background-color: var(--Primary-Plain); }
+.PrimaryFont { color: var(--Primary-Bright); text-shadow: var(--Primary-Outline); }
+.PrimaryGradient { background-image: url(../Images/Linear_Gradient_Primary.png); background-size: cover; }
+
+.ContrastBox { border-color: var(--Contrast-Dark); background-color: var(--Contrast-Plain); }
+.ContrastFont { color: var(--Contrast-Bright); text-shadow: var(--Contrast-Outline); }
+.ContrastGradient { background-image: url(../Images/Linear_Gradient_Contrast.png); background-size: cover; }
+
+.InverseBox { border-color: var(--Inverse-Dark); background-color: var(--Inverse-Plain); }
+.InverseFont { color: var(--Inverse-Bright); text-shadow: var(--Inverse-Outline); }
+.InverseGradient { background-image: url(../Images/Linear_Gradient_Inverse.png); background-size: cover; }
+
+.AccentBox { border-color: var(--Accent-Dark); background-color: var(--Accent-Plain); }
+.AccentFont { color: var(--Accent-Bright); text-shadow: var(--Accent-Outline); }
+.AccentGradient { background-image: url(../Images/Linear_Gradient_Accent.png); background-size: cover; }
+
+
+/* Default Page Styles */
+html, body {
+   position: relative;
+   left:0;
+   right:0;
+   background-image: url(../Images/Linear_Gradient_Inverse.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+body {
+   display: block;
+   margin: 0vw;
 }
 
 
-.Dynamic { width: auto; height: inherit; }
-.Fullscreen { width: var(--Screen_Width); height: var(--Screen_Height); }
-.Centered { text-align: center; vertical-align: middle; }
+/* Slideshow Styles */
+.Slideshow { text-align: center; }
+.Slide {
+   width: 100%;
+   min-height: calc(60vh - 3rem);
+   max-height: calc(80vh - 3rem);
+   height: calc(70vw - 3rem);
+   background-position: 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   box-shadow: var(--Shadow_Thick);
+   animation: Fade_In 1.5s;
+}
+.Slide.Topround { border-radius: 2vw 2vw 0vw 0vw; }
+.Slide.Bottomround { border-radius: 0vw 0vw 2vw 2vw; }
 
-/* NAV */
-.Nav { background-color: var(--Palette-Plain-Orange); height: var(--Nav_Height); border-radius: 64px; font-size: var(--Font_Size_Normal); }
-.Nav.Table { display: table; background-color: var(--Palette-Dark-Orange); width: var(--Nav_Bar_Width); padding: 5px; margin: auto; }
-.Nav.Row { display: table-row; }
-.Nav.Cell { display: table-cell; width: var(--Nav_Cell_Width); }
-/* For creating gaps between cells */
-.Nav.Stile { display: table-cell; background-color: var(--Palette-Dark-Orange); width: var(--Nav_Gap); }
-.Nav.Cell.Button {border-style: groove; border-color: transparent; padding-left: 10px; padding-right: 10px; box-shadow: var(--Shadow_Thin); }
-.Nav.Cell.Button:hover { border-color: hsla(45, 25%, 70%, 0.5); }
+/* Slideshow Toolbar Styles */
+.Slideshow_Toolbar {
+   width: 100%;
+   height: 3rem;
+   border-style: outset;
+   border-width: 0.5vw 0.5vw 1vw 0.5vw;
+   padding-top: 0.5%;
+}
+.Slideshow_Toolbar.Topround { border-radius: 2vw 2vw 0% 0%; }
+.Slideshow_Toolbar.Bottomround { border-radius: 0% 0% 2vw 2vw;  }
+.Slideshow_Toolbar button {
+   position: relative;
+   height: 3rem;
+   border-style: solid;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+   padding: 0%;
+}
+.Slideshow_Toolbar td { vertical-align: middle; padding: 0% 1%; }
+.Slideshow_Toolbar td:first-child { width: 26%; text-align: left; }
+.Slideshow_Toolbar td:last-child { width: 26%; text-align: right; }
+.Slideshow_Dots { width: 48%; text-align: center; }
+.Slideshow_Caption { font-size: 3rem; font-family: Cookie; }
 
-/* BANNERS */
-.Banner { background-color: var(--Palette-Plain-Green); width: var(--Screen_Width); height: var(--Banner_Height); }
-.Banner.Table { display: table;  background-color: var(--Palette-Dark-Green); padding: 5px; box-shadow: var(--Shadow_Thick); }
-.Banner.Row { display: table-row; }
-/* For filling the whole banner with a single cell */
-.Banner.Cell { display: table-cell; }
-/* For aligning a square image to the left or right */
-.Banner.Icon { display: table-cell; width: var(--Banner_Height); height: var(--Banner_Height); }
-.Banner.Caption { display: table-cell; width: (99vw - var(--Banner_Height)); height: var(--Banner_Height); }
+/* Slideshow Toolbar Button Styles */
+.Dot {
+   width: 3rem;
+   margin: 0vw 0.5vw;
+   border-width: 1vw;
+   border-radius: 50%;
+   border-color: transparent;
+   background-color: var(--Primary-Bright);
+}
+.Dot.active { background-color: var(--Primary-Dark); }
 
-/* PANELS */
-.Panel { background-color: var(--Palette-Plain-Purple); width: var(--Screen_Width); height: var(--Panel_Height); }
-.Panel.Table { display: table;  background-color: var(--Palette-Dark-Purple); padding: 5px; box-shadow: var(--Shadow_Thick); }
-.Panel.Row { display: table-row; }
-/* For filling the whole panel with a single cell */
-.Panel.Cell { display: table-cell; }
+.Forward, .Back {
+   width: 6rem;
+   bottom: 0.5vw;
+   margin: 0vw;
+   border-width: 1.5rem 3rem;
+   background-color: transparent;
+}
+.Forward { border-color: transparent transparent transparent var(--Primary-Bright); }
+.Back { border-color: transparent var(--Primary-Bright) transparent transparent; }
+
+.Toggle {
+   width: 3rem;
+   margin: 0%;
+   bottom: 0.125vw;
+   border-width: 0vw 1rem;
+   border-radius: 0%;
+   border-color: transparent var(--Primary-Bright) transparent var(--Primary-Bright);
+   background-color: transparent;
+}
+.Toggle.active {
+   bottom: 0.3vw;
+   border-width: 1.5rem 0rem 1.5rem 3rem;
+   border-color: transparent transparent transparent var(--Primary-Bright);
+}
 
 
-/* Average Laptop */
+/* Media Query - Average Laptop */
 @media (max-width: 1024px) {
-   * 
-   {
-      --Nav_Height: 24px;
-   }
+   :root { --Mode: Laptop; }
+   body { width: 100vw; }
 }
-
-/* Average Tablet Device */
+/* Media Query - Average Tablet Device */
 @media (max-width: 768px) {
-   * 
-   {
-      --Nav_Height: 16px;
+   :root {   
+      /* Switch to Compact Format if device is a tablet or smaller. */
+      --Format: Compact;
+      --Mode: Tablet;
    }
+   body { width: 100vw; }
 }
-
-/* Average Mobile Device */
+/* Media Query - Average Mobile Device */
 @media (max-width: 480px) {
-   * 
-   {
-      --Nav_Height: 14px;
-   }
+   :root { --Mode: Mobile; }
+   body { width: 100vw; }
 }
 
 

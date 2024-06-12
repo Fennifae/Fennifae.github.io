@@ -1,4 +1,3 @@
-<!-- HTML Prefab -->
 <!DOCTYPE html>
 <html>
 
@@ -7,53 +6,83 @@
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Sweet ReLEAF - Peace Lounge</title>
    <link rel="stylesheet" href="../Styles/SR_Style.css" />
+   <link rel="stylesheet" href="../Styles/SR_Nav_Style.css" />
    <link rel="stylesheet" href="../Styles/SR_Peace_Lounge_Style.css" />
-
-   <!-- Header -->
-   <table id="Peace_Lounge_Header" class="Banner Table">
-      <tr class="Banner Row">
-         <td class="Banner Icon"><img class="Dynamic" src="../Images/SR_Clear.png" /></td>
-         <td class="Banner Caption"></td>
-      </tr>
-   </table>
-
+   <link rel="stylesheet" href="../Styles/SR_Footer_Style.css" />
+   <script src="../Scripts/SR_Tools.js"></script>
 </head>
 
-<body id="Peace_Lounge">
+<body>
 
-   <!-- Nav Bar -->
-   <div class="Centered">
-      <table id="Home_Nav" class="Nav Table">
-         <tr class="Nav Row">
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Home.html');" value="Home" /></td>
-            <td class="Nav Stile"></td>
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Stones.html');" value="Stones" /></td>
-            <td class="Nav Stile"></td>
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Decor.html');" value="Decor" /></td>
-            <td class="Nav Stile"></td>
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/CBD.html');" value="CBD" /></td>
+   <script src="../Scripts/SR_Nav_Controller.js"></script>
+
+   <div id="Peace_Lounge">
+
+      <table id="PL_Intro">
+         <tr>
+            <td id="PL_Caption_Panel">
+               <table id="PL_Caption" class="ContrastBox PrimaryFont ContrastGradient">
+                  <tr>
+                     <td>
+                        If you're seeking a place where you can put your worries behind you, look no further!
+                        In Sweet ReLeaf's Peace Lounge, you can relax in style. Once you obtain your favorite wellness
+                        products, the lounge is your best friend. Sink into any of our cozy chairs and enjoy!
+                     </td>
+                  </tr>
+               </table>
+            </td>
          </tr>
       </table>
+
+      
+      <table id="PL_Chalkboard" class="InverseBox InverseFont InverseGradient">
+         <tr>
+            <td id="PL_Chalkboard_Caption" class="PrimaryFont">
+               <h1><i>Make your mark</i></h1>
+            </td>
+         </tr>
+      </table>
+
+      <table id="PL_Seating">
+         <tr>
+            <td id="PL_Seating_Panel_R">
+               <table id="PL_Snack_Panel" class="InverseBox InverseFont InverseGradient">
+                  <tr>
+                     <td id="PL_Entrance_Sign"></td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <table id="PL_Snacks_Rack" class="InverseBox InverseFont InverseGradient">
+                           <tr>
+                              <td id="PL_Logo_Redbull" class="PL_Logo"></td>
+                              <td id="PL_Logo_Cocacola" class="PL_Logo"></td>
+                              <td id="PL_Logo_Hersheys" class="PL_Logo"></td>
+                              <td id="PL_Logo_Lays" class="PL_Logo"></td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+
+                  <tr>
+                     <td>
+                        <h2 class="PrimaryFont"><i>Got the munchies?</i></h2>
+                        We've got snacks, too!
+                     </td>
+                  </tr>
+
+               </table>
+            </td>
+            <td id="PL_Seating_Image" class="InverseBox AccentFont InverseGradient"><h1><i>Tell your story</i></h1></td>
+         </tr>
+      </table>
+
    </div>
 
-   <table class="Panel Table">
-      <tr class="Panel Row">
-         <td class="Panel Cell"></td>
-      </tr>
-   </table>
+   <script src="../Scripts/SR_Footer_Controller.js"></script>
 
 </body>
 
-<footer>
-
-   <!-- Footer -->
-   <table id="Peace_Lounge_Footer" class="Banner Table">
-      <tr class="Banner Row">
-         <td class="Banner Caption"></td>
-         <td class="Banner Icon"><img class="Dynamic" src="../Images/SR_Clear.png" /></td>
-      </tr>
-   </table>
-
-</footer>
+<footer></footer>
 
 </html>

@@ -1,4 +1,3 @@
-<!-- HTML Prefab -->
 <!DOCTYPE html>
 <html>
 
@@ -7,53 +6,85 @@
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Sweet ReLEAF - Home</title>
    <link rel="stylesheet" href="../Styles/SR_Style.css" />
+   <link rel="stylesheet" href="../Styles/SR_Nav_Style.css" />
    <link rel="stylesheet" href="../Styles/SR_Home_Style.css" />
-
-   <!-- Header -->
-   <table id="Home_Header" class="Banner Table">
-      <tr class="Banner Row">
-         <td class="Banner Icon"><img class="Dynamic" src="../Images/SR_Clear.png" /></td>
-         <td class="Banner Caption"></td>
-      </tr>
-   </table>
-
+   <link rel="stylesheet" href="../Styles/SR_Footer_Style.css" />
+   <script src="../Scripts/SR_Tools.js"></script>
 </head>
 
-<body id="Home">
+<body>
 
-   <!-- Nav Bar -->
-   <div class="Centered">
-      <table id="Home_Nav" class="Nav Table">
-         <tr class="Nav Row">
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Peace_Lounge.html');" value="Peace Lounge" /></td>
-            <td class="Nav Stile"></td>
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Stones.html');" value="Stones" /></td>
-            <td class="Nav Stile"></td>
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/Decor.html');" value="Decor" /></td>
-            <td class="Nav Stile"></td>
-            <td class="Centered Nav Cell"><input class="Nav Cell Button" type="button" onclick="window.location.replace=(getComputedStyle(document.body).getPropertyValue('--Path') + '/Pages/CBD.html');" value="CBD" /></td>
+   <script src="../Scripts/SR_Nav_Controller.js"></script>
+
+   <div id="Home">
+      <table id="Home_Welcome">
+         <tr>
+            <td id="Home_Welcome_Message">
+               <h1 class="PrimaryFont">Welcome</h1>
+               <h3 class="AccentFont">to good vibes&nbsp;</h3>
+            </td>
+         </tr>
+      </table>
+      <table id="Home_About">
+         <tr>
+            <td id="Home_Sidebar" class="InverseBox InverseFont InverseGradient">
+               <h1>Hours</h1>
+               <table id="Home_Hours" class="ContrastBox PrimaryFont ContrastGradient">
+                  <tr><td>Monday:</td><td><i>10am&nbsp;-&nbsp;8pm</i></td></tr>
+                  <tr><td>Tuesday:</td><td><i>10am&nbsp;-&nbsp;8pm</i></td></tr>
+                  <tr><td>Wednesday:</td><td><i>10am&nbsp;-&nbsp;8pm</i></td></tr>
+                  <tr><td>Thursday:</td><td><i>10am&nbsp;-&nbsp;8pm</i></td></tr>
+                  <tr><td>Friday:</td><td><i>10am&nbsp;-&nbsp;9pm</i></td></tr>
+                  <tr><td>Saturday:</td><td><i>10am&nbsp;-&nbsp;9pm</i></td></tr>
+                  <tr><td>Sunday:</td><td><i>12pm&nbsp;-&nbsp;6pm</i></td></tr>
+               </table>
+            </td>
+            <td id="Home_Sidebar_Classic" class="InverseBox InverseFont InverseGradient">
+               <h1>Location</h1>
+               <table id="Home_Location_Classic" class="ContrastBox ContrastGradient">
+                  <tr><td><iframe  id="Home_Map_Classic" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d785.6681352423315!2d-78.48264013035607!3d38.03141285459734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b387d3ec2be265%3A0x57277bc92093e211!2sSweet%20ReLeaf!5e0!3m2!1sen!2sus!4v1716844134976!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td></tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td id="Home_Sidebar_Compact" class="InverseBox InverseFont InverseGradient">
+               <h1>Location</h1>
+               <table id="Home_Location_Compact" class="ContrastBox ContrastGradient">
+                  <tr><td><iframe  id="Home_Map_Compact" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d785.6681352423315!2d-78.48264013035607!3d38.03141285459734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b387d3ec2be265%3A0x57277bc92093e211!2sSweet%20ReLeaf!5e0!3m2!1sen!2sus!4v1716844134976!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td></tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td id="Home_Info" class="InverseBox InverseFont InverseGradient" colspan="2">
+               <h1>About Us</h1>
+               <table id="Home_About_Us" class="ContrastBox PrimaryFont ContrastGradient">
+                  <tr>
+                     <td>
+                        Sweet ReLeaf began its humble journey in 2014 as Smoke Brake Vapes. Since the beginning, we've
+                        been spreading peace and good vibes to everyone around. We are proudly Woman-Owned, and happily provide
+                        a safe place for all people to hang out and relax.<br/><br/>
+                        
+                        Entering into Sweet ReLeaf's Peace Lounge will bring you straight to your happy place.<br/>
+                        From CBD to snacks, we offer everything you need to let your stress fade away. Simply order at the counter,
+                        and enjoy!<br/><br/>
+                        
+                        Want to bring the good vibes with you?<br/>
+                        We offer a variety of decorations so that you can create your very own Peace Lounge, just how you like it.<br/><br/>
+                        
+                        Looking to indulge your spiritual side?<br/>
+                        We offer stones and crystals in many exotic varieties, mystical tarot decks, sacred incense, and so much more!<br/><br/>
+
+                        <h2><i>Live Well, Be Well</i></h2>
+                     </td>
+                  </tr>
+               </table>
+            </td>
          </tr>
       </table>
    </div>
-
-   <table class="Panel Table">
-      <tr class="Panel Row">
-         <td class="Panel Cell"></td>
-      </tr>
-   </table>
+   
+   <script src="../Scripts/SR_Footer_Controller.js"></script>
 
 </body>
-
-<footer>
-
-   <!-- Footer  -->
-   <table id="Home_Footer" class="Banner Table">
-      <tr class="Banner Row">
-         <td class="Banner Caption"></td>
-         <td class="Banner Icon"><img class="Dynamic" src="../Images/SR_Clear.png" /></td>
-      </tr>
-   </table>
-
-</footer>
 
 </html>

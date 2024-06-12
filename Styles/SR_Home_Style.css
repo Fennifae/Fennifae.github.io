@@ -1,3 +1,103 @@
-#Home { background-color: var(--Palette-Plain-Green); }
-#Home_Header {  border-width: 5px; }
-#Home_Footer {  border-width: 5px; }
+#Home {
+   width: 100%;
+   height: 100%;
+}
+
+#Home_Welcome {
+   width: 100%;
+   min-height: 60vh;
+   max-height: 87vh;
+   height: 75vw;
+   background-image: url(../Images/Storefront.png);
+   background-position: 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 2vw;
+   box-shadow: var(--Shadow_Thick);
+}
+#Home_Welcome_Message {
+   font-family: Cookie;
+   font-size: 7rem;
+   text-align: right;
+   text-shadow: var(--Shadow_Thin);
+   vertical-align: bottom;
+   padding: 1%;
+}
+#Home_Welcome_Message h1 {
+   font-family: Cookie;
+   height: 12vw;
+   margin-bottom: 0%;
+}
+#Home_Welcome_Message h3 {
+   font-family: Cookie;
+   margin: 0%;
+}
+
+#Home_About {
+   width: 98%;
+   margin: 1%;
+}
+#Home_Sidebar, #Home_Sidebar_Classic, #Home_Sidebar_Compact, #Home_Info {
+   width: 50%;
+   text-align: center;
+   font-family: Andy-Bold;
+   font-size: 2rem;
+   border-style: outset;
+   border-width: 2vw;
+   border-radius: 2vw;
+   box-shadow: var(--Shadow_Thick);
+   padding: 1vw;
+}
+#Home_Info { width: 100%; }
+#Home_Info h2 {
+   font-family: Cookie;
+   font-size: 4rem;
+   margin-top: 0%;
+}
+#Home_Sidebar h1, #Home_Sidebar_Classic h1, #Home_Sidebar_Compact h1, #Home_Info h1 {
+   text-align: center;
+   margin: 0% 25% 1% 25%;
+   border-right: 2vw double;
+   border-left: 2vw double;
+}
+#Home_Hours, #Home_Location_Classic, #Home_Location_Compact, #Home_About_Us {
+   width: 100%;
+   height: 24rem;
+   text-align: center;
+   border-style: ridge;
+   border-width: 2vw;
+   border-radius: 2vw;
+   padding-left: 3%;
+   padding-right: 3%;
+}
+#Home_Hours td:first-child { padding-right: 2vw; }
+#Home_Sidebar_Compact { display: none; }
+#Home_About_Us {
+   padding: 5%;
+   padding-bottom: 0%;
+}
+#Home_Map_Classic, #Home_Map_Compact {
+   margin: 1.5% 0% 1.5% 0%;
+   margin-bottom: 0%;
+   height: 94%;
+   width: 98.5%;
+}
+
+/* Average Tablet Device - Compact switchover */
+@media (max-width: 768px) {
+   #Home_Sidebar {
+      width: 98.5%;
+      font-size: 5rem;
+   }
+   #Home_Sidebar_Classic {
+      display: none;
+   }
+   #Home_Sidebar_Compact {
+      display: table;
+      width: 94%;
+      font-size: 5rem;
+   }
+}
+
+
+
