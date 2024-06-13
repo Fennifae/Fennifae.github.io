@@ -12,7 +12,7 @@
 
 <h4 align="center">
   
-  [:question: Preview the website at any time by clicking here! :question:](http://htmlpreview.github.io/?https://github.com/Fennifae/Website/blob/main/Pages/Verification.html)
+  [:question: Preview the website at any time by clicking here! :question:](https://fennifae.github.io/)
 </h4>
 
 *Construction of the website is well under way!*
