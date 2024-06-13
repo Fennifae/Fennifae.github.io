@@ -23,6 +23,7 @@ The general plan for the website is outlined below, in the Roadmap. Plans for fe
 
 > [!Note]
 > Since the last update, much has improved. <br/><br/>
+The Website has outgrown the previously used Preview Engine, and has been replaced with genuine web hosting through Github Pages! Technically, it's not preview, but a real website actually on the internet. It just has a different address!<br/><br/>
 Both the Navigation Bar and the Footer have been made into intelligent modules, powered by JavaScript. The Navigation bar features the ability to open and close automatically when the user hovers over it (on computers). The Footer features mandatory FDA disclosures and all important contact information. <br/><br/>
 Device optimization has been thoroughly tested using device emulators, to ensure maximum compatability. The website will adapt to the resolution of the device used (including mobile screen flips and desktop window resizing). <br/><br/>
 A <i>Tetradic</i> (4-Color) color scheme has been implemented. This scheme is known for being especially beautiful when the colors chosen follow a pattern.<br/><br/><i>Heartbeat</i>, a custom utility for controlling the slideshows, is also fully functional. The slideshows may be paused or cycled through manually without de-synchronzing. A regular 'pulse' times the slideshows to switch every 5 seconds (alternating which slideshow is moved forward).
