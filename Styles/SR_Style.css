@@ -15,8 +15,8 @@
 @keyframes Fade_In { from {opacity: .4} to {opacity: 1} }
 :root {
    /* USE THE 'C://' PATH WHEN WORKING LOCALLY. USE THE GITHUB PATH WHEN PREVIEWING THE WEBSITE. */
-   /* --Path: C://DEV/Website;  */
-   --Path: http://html-preview.github.io/?url=https://github.com/Fennifae/Website/blob/main;
+   --Path: file://C:/DEV/Website;
+   /* --Path: http://html-preview.github.io/?url=https://github.com/Fennifae/Website/blob/main;  */
 
    /* rem unit definition - based on the font size of the root element */
    font-size: 1vw;

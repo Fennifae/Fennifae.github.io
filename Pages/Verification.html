@@ -30,15 +30,16 @@
    <script type="text/javascript">
       function verify (mode) {
          if (mode) {
-            document.cookie = "VERIFIED21=true";
-            window.location.replace(getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html");
+            document.cookie = "SameSite=Strict VERIFIED21=true";
+            location = (getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html");
+            //alert("Tried to move! [" + getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html]");
          }
-         else window.location.replace("http://www.google.com");
+         else location = "http://www.google.com";
       }
       var focus = document.getElementById("Verification_Box");
       //If there is a cookie already stored, don't show this popup
       if (document.cookie.indexOf("VERIFIED21") >= 0) {
-         window.location.replace(getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html");
+         location = (getComputedStyle(document.documentElement).getPropertyValue('--Path') + "/Pages/Home.html");
       }
    </script>
 

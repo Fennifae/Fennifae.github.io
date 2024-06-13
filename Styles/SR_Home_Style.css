@@ -37,7 +37,10 @@
    width: 98%;
    margin: 1%;
 }
-#Home_Sidebar, #Home_Sidebar_Classic, #Home_Sidebar_Compact, #Home_Info {
+#Home_Sidebar,
+#Home_Sidebar_Classic,
+#Home_Sidebar_Compact,
+#Home_Info {
    width: 50%;
    text-align: center;
    font-family: Andy-Bold;
@@ -54,13 +57,19 @@
    font-size: 4rem;
    margin-top: 0%;
 }
-#Home_Sidebar h1, #Home_Sidebar_Classic h1, #Home_Sidebar_Compact h1, #Home_Info h1 {
+#Home_Sidebar h1,
+#Home_Sidebar_Classic h1,
+#Home_Sidebar_Compact h1,
+#Home_Info h1 {
    text-align: center;
    margin: 0% 25% 1% 25%;
    border-right: 2vw double;
    border-left: 2vw double;
 }
-#Home_Hours, #Home_Location_Classic, #Home_Location_Compact, #Home_About_Us {
+#Home_Hours,
+#Home_Location_Classic,
+#Home_Location_Compact,
+#Home_About_Us {
    width: 100%;
    height: 24rem;
    text-align: center;
@@ -76,11 +85,17 @@
    padding: 5%;
    padding-bottom: 0%;
 }
-#Home_Map_Classic, #Home_Map_Compact {
-   margin: 1.5% 0% 1.5% 0%;
-   margin-bottom: 0%;
-   height: 94%;
-   width: 98.5%;
+#Home_Location_Classic,
+#Home_Location_Compact {
+   padding: 2.5% 0.5% 1% 0%;
+}
+#Home_Map_Classic {
+   height: 17rem;
+   width: 100%;
+}
+#Home_Map_Compact {
+   height: 50rem;
+   width: 100%;
 }
 
 /* Average Tablet Device - Compact switchover */
