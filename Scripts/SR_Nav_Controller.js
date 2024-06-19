@@ -53,7 +53,7 @@ var root = "getComputedStyle(document.documentElement).getPropertyValue('--Path'
 switch (page) {
    case "Home":
       propose("--Current_Page", "Home");
-      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icon_Home.png')";
+      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icons/Icon_Home.png')";
       document.getElementById("Nav_Page_Label").innerHTML = "Home";
       document.getElementById("Nav_Button_1").innerHTML = "Peace Lounge";
       document.getElementById("Nav_Button_1").setAttribute("onclick", "window.location.replace(" + root + " + '/Pages/Peace_Lounge.html')");
@@ -67,7 +67,7 @@ switch (page) {
 
    case "Peace_Lounge":
       propose("--Current_Page", "Peace_Lounge");
-      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icon_Peace_Lounge.png')";
+      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icons/Icon_Peace_Lounge.png')";
       document.getElementById("Nav_Page_Label").innerHTML = "Peace Lounge";
       document.getElementById("Nav_Button_1").innerHTML = "Home";
       document.getElementById("Nav_Button_1").setAttribute("onclick", "window.location.replace(" + root + " + '/Pages/Home.html')");
@@ -81,7 +81,7 @@ switch (page) {
 
    case "Stones":
       propose("--Current_Page", "Stones");
-      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icon_Stones.png')";
+      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icons/Icon_Stones.png')";
       document.getElementById("Nav_Page_Label").innerHTML = "Stones";
       document.getElementById("Nav_Button_1").innerHTML = "Home";
       document.getElementById("Nav_Button_1").setAttribute("onclick", "window.location.replace(" + root + " + '/Pages/Home.html')");
@@ -95,7 +95,7 @@ switch (page) {
 
    case "Decor":
       propose("--Current_Page", "Decor");
-      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icon_Decor.png')";
+      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icons/Icon_Decor.png')";
       document.getElementById("Nav_Page_Label").innerHTML = "Decor";
       document.getElementById("Nav_Button_1").innerHTML = "Home";
       document.getElementById("Nav_Button_1").setAttribute("onclick", "window.location.replace(" + root + " + '/Pages/Home.html')");
@@ -109,7 +109,7 @@ switch (page) {
 
    case "CBD":
       propose("--Current_Page", "CBD");
-      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icon_CBD.png')";
+      document.getElementById("Nav_Page_Icon").style.backgroundImage = "url('../Images/Icons/Icon_CBD.png')";
       document.getElementById("Nav_Page_Label").innerHTML = "CBD";
       document.getElementById("Nav_Button_1").innerHTML = "Home";
       document.getElementById("Nav_Button_1").setAttribute("onclick", "window.location.replace(" + root + " + '/Pages/Home.html')");

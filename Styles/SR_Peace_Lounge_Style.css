@@ -68,10 +68,10 @@
    box-shadow: var(--Shadow_Thick);
 }
 .PL_Logo { width: 5vw; background-size: contain; background-repeat: no-repeat; }
-#PL_Logo_Redbull { background-image: url(../Images/Logo_Redbull.png); }
-#PL_Logo_Cocacola { background-image: url(../Images/Logo_Cocacola.png); }
-#PL_Logo_Hersheys { background-image: url(../Images/Logo_Hersheys.png); }
-#PL_Logo_Lays { background-image: url(../Images/Logo_Lays.png); background-position-y: 2.5%;}
+#PL_Logo_Redbull { background-image: url(../Images/Icons/Logo_Redbull.png); }
+#PL_Logo_Cocacola { background-image: url(../Images/Icons/Logo_Cocacola.png); }
+#PL_Logo_Hersheys { background-image: url(../Images/Icons/Logo_Hersheys.png); }
+#PL_Logo_Lays { background-image: url(../Images/Icons/Logo_Lays.png); background-position-y: 2.5%;}
 
 #PL_Seating_Panel_R { width: 20%; padding: 0%; }
 #PL_Seating_Image {

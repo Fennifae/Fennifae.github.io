@@ -82,7 +82,7 @@
    width: 20%;
    background-size: contain;
    background-repeat: no-repeat;
-   background-image: image-set(url('../Images/Icon_Menu.png'));
+   background-image: image-set(url('../Images/Icons/Icon_Menu.png'));
 }
 #Nav_Header_Holder {
    display: inline-block;
@@ -184,11 +184,11 @@
    [style*="--Shade_Button_Hover: false;"],
    [style*="--Shade_Open: true;"]
    ) #Nav_Shade_Toggle {
-      background-image: image-set(url('../Images/Icon_Down.png'));
+      background-image: image-set(url('../Images/Icons/Icon_Down.png'));
    }
 /* Triggered when the shade is locked open. (show up-arrow) */
 :root[style*="--Shade_Locked: true;"]:not(
    [style*="--Shade_Open: false;"]
    ) #Nav_Shade_Toggle {
-      background-image: image-set(url('../Images/Icon_Up.png'));
+      background-image: image-set(url('../Images/Icons/Icon_Up.png'));
    }

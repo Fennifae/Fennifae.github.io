@@ -24,7 +24,7 @@
    background-repeat: no-repeat;
    padding: 5% 55% 15% 55%;
 }
-#Footer_Instagram_Icon { background-image: url(../Images/Icon_Instagram.png); }
+#Footer_Instagram_Icon { background-image: url(../Images/Icons/Icon_Instagram.png); }
 #Footer_Instagram_Link {
    font-family: Cookie;
    font-size: 2rem;
@@ -53,9 +53,9 @@
 .Footer_Info_Cell table { width: 100%; }
 .Footer_Info_Cell:first-child .Footer_Icon { width: 10%; text-align: right; }
 .Footer_Info_Cell .Footer_Icon { width: 25%; text-align: right; }
-#Footer_Address_Icon { background-image: url(../Images/Icon_Address.png); }
-#Footer_Email_Icon { background-image: url(../Images/Icon_Email.png); }
-#Footer_Phone_Icon { background-image: url(../Images/Icon_Phone.png); }
+#Footer_Address_Icon { background-image: url(../Images/Icons/Icon_Address.png); }
+#Footer_Email_Icon { background-image: url(../Images/Icons/Icon_Email.png); }
+#Footer_Phone_Icon { background-image: url(../Images/Icons/Icon_Phone.png); }
 
 #Footer_Disclaimer {
    border-top: 2vw double hsl(130, 30%, 25%);
